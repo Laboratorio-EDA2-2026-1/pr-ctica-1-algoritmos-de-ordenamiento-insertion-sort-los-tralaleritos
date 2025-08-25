@@ -20,7 +20,7 @@
  * - NO cambies la firma de sort_matrix().
  */
 
-void sort_matrix(int **matrix, int n) {
+void sort_matrix(int **matrix, int *new_matrix, int n) {
     // TODO: Implementa aquí el algoritmo.
     // Necesitarás el método de inserción,
     // pero recuerda aplicar la regla de mover toda la columna.
@@ -43,9 +43,7 @@ void sort_matrix(int **matrix, int n) {
         }
     }
     */
-}
 
-void copy_sort_repeat(int **matrix, int *new_matrix, int n){
     //El numero de elementos de una matriz de tamaño n x n, es la operacion n*n
     int num_elementos = n * n;
 
@@ -96,9 +94,9 @@ int main() {
 
     // Ejemplo de entrada
     int ejemplo[3][3] = {
-        {4, 7, 2},
-        {9, 5, 6},
-        {8, 1, 3}
+        {3, 19, -2},
+        {1, 5, -21},
+        {-54, 200, 4}
     };
 
     // Copiar ejemplo a la matriz dinámica
@@ -117,7 +115,7 @@ int main() {
     }
 
     // Llamada a la función que deben completar
-    copy_sort_repeat(matrix, new_matrix, n);
+    sort_matrix(matrix, new_matrix, n);
     //sort_matrix(matrix, n);
 
     printf("\nMatriz ordenada:\n");
